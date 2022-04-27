@@ -1,0 +1,54 @@
+Nesne Yönelimli Programlama
+1- CLI ( Command Line Interface) : komut istemi arayüzü
+dotnet
+dotnet --help
+dotnet -h
+dotnet new -h
+dotnet new -l //listeleme
+dotnet new console -o HelloWorld  //proje oluþturuldu
+cd HelloWorld
+dir 
+type program.cs  //dosya içeriðini gösterir.
+dotnet run  // uygulama çalýþtýrýlýr.
+dotnet build //projenin derlenmesi.
+code . // uygulamanýn vs code ile açýlmasý saðlanýr.
+----------------------------------------------------
+program main metodu ile satýr satýr çalýþýr. static bir methodtur.
+AddAClass: Projeye Sýnýf Eklenmesi
+bir sýnýfýn access modify belirtilmemiþ ise  internal olarak default tanýmlanýr.
+
+Field  : string _firstName; þeklinde tanýmlanýr.
+
+Proporties : 
+ public string FirstName
+    {
+        set { _firstName = value; }
+        get { return _firstName; }
+    }
+
+Expression bodied proporty accessors : Lambda ile gösterilir.
+   private string _lastName;
+    public string LastName { get => _lastName; set => _lastName = value; }
+
+Auto implement proporties : get ve set için özel bir iþlem yapýlmayacaksa kullanýlýr. -prop
+ public int Age { get; set; }
+
+ Constructor : Yapýlandýrýcý method ile nesne oluþturulurken çalýþýacak methot   -ctor
+ sýnýfýn ayný ismi ile tanýmlanýr. birden fazla constructor tanýmlanabilir.s
+ yazmasak bile default olarak tanýmlanýr. 
+ overloading yaparak farklý bir constructor oluþturursak default olarak boþ constructor tanýmlanmak zorundadýr.
+
+
+
+ Override Ýþlemi
+ Ctrl . ile generate override ( geçersiz kýlma) ekraný açýlýr.
+ ToString metodu override edilir.
+ Employee emploeyee3 = new Employee("Ahmet","KARA",21);
+Console.WriteLine(emploeyee3);
+bu þekilde kullanmamýz haliden tostring yapýsýnda kullandýðýmýz þekilde ekrana dönüþ yapar.
+
+methodlarda params keyword ile birden fazla ekleme iþlemi yapabiliriz.
+Add methodu eklenmesi
+addrange methodu eklenmesi
+Expression bodied method
+GetEmployees metodlarý tanýmlanýr.
